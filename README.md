@@ -2,7 +2,7 @@
 
 ## Live version:
 
-- [] Coming Soon!
+- [ ] Coming Soon!
 
 ## What this does:
 
