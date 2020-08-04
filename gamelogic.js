@@ -88,11 +88,13 @@ function utility(board) {
 function getBestMove(board) {
 	let bestScore = player(board) === X ? -Infinity : +Infinity;
 	let bestMove;
+	let scores = [];
 
 	let aa = actions(board); // aa = available actions
 
 	for (let i = 0; i < aa.length; i++) {
 		let score = minimax(result(board, aa[i]), 0);
+		scores.push(score);
 		if (player(board) === O) {
 			if (score < bestScore) {
 				bestScore = score;
@@ -105,6 +107,7 @@ function getBestMove(board) {
 			}
 		}
 	}
+	console.log(scores);
 	return bestMove;
 }
 
@@ -112,7 +115,7 @@ function minimax(board, depth) {
 	if (terminal(board)) {
 		return utility(board);
 	}
-	if (player(board) === "X") {
+	if (player(board) === X) {
 		let bestScore = -Infinity;
 		let aa = actions(board);
 
