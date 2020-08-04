@@ -8,50 +8,57 @@
 	</head>
 	<body>
 		<nav>
-			<button class="trigger">Instructions</button>
-			<div class="modal">
-				<div class="modal-content">
-					<span class="close-button">&times;</span>
-					<h1>Instructions</h1>
-					<ul>
-						<li>Standard Tic-Tac-Toe</li>
-						<li>
-							When you make a move, all possible moves will appear in the next
-							row, with the AI's "best" move highlighted in blue.
-						</li>
-						<li>
-							You can keep playing the optimal version of the game or choose any
-							of the other options.
-						</li>
-					</ul>
+			<div class="info-control">
+				<button class="trigger">Instructions</button>
+				<div class="modal">
+					<div class="modal-content">
+						<span class="close-button">&times;</span>
+						<h1>Instructions</h1>
+						<ul>
+							<li>Standard Tic-Tac-Toe</li>
+							<li>
+								When you make a move, all possible moves will appear in the next
+								row, with the AI's "best" move highlighted in blue.
+							</li>
+							<li>
+								You can keep playing the optimal version of the game or choose
+								any of the other options.
+							</li>
+						</ul>
+					</div>
 				</div>
-			</div>
-			<button class="reset" onclick="reset()">Start as X</button>
-			<button class="reset" onclick="aifirstmove()">Start as O</button>
-			<button class="trigger info-trigger">Some Info</button>
-			<div class="modal info-modal">
-				<div class="modal-content info-modal">
-					<span class="close-button info-close-button">&times;</span>
-					<h1>Some Info</h1>
-					<ul>
-						<li>
-							This uses the minimax algorithm to get the best move for any
-							situation.
-						</li>
-						<li>
-							Playing against AI's optimal moves, you will either lose or tie
-							the game!
-						</li>
-						<li>
-							Due to the way its set up, the algorithm doesn't try to win as
-							quickly as possible.
-						</li>
-					</ul>
+				<button class="trigger info-trigger">Some Info</button>
+				<div class="modal info-modal">
+					<div class="modal-content info-modal">
+						<span class="close-button info-close-button">&times;</span>
+						<h1>Some Info</h1>
+						<ul>
+							<li>
+								This uses the minimax algorithm to get the best move for any
+								situation.
+							</li>
+							<li>
+								Playing against AI's optimal moves, you will either lose or tie
+								the game!
+							</li>
+							<li>
+								Due to the way its set up, the algorithm doesn't try to win as
+								quickly as possible.
+							</li>
+						</ul>
+					</div>
 				</div>
+				<a
+					href="https://github.com/ishandotsh/minimax-visualizer"
+					target="_blank"
+					><button class="social">Github</button></a
+				>
 			</div>
-			<a href="https://github.com/ishandotsh/minimax-visualizer" target="_blank"
-				><button class="social">Github</button></a
-			>
+
+			<div class="game-control">
+				<button class="reset" onclick="reset()">Start as X</button>
+				<button class="reset" onclick="aifirstmove()">Start as O</button>
+			</div>
 		</nav>
 
 		<div class="container" id="container"></div>
