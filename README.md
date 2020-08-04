@@ -2,7 +2,7 @@
 
 ## Live version:
 
-- [ ] Coming Soon!
+- [x] https://minimaxttt.netlify.app/
 
 ## What this does:
 
@@ -14,7 +14,7 @@
 
 ## To be added:
 
-- [ ] Beautify✨
+- [x] Beautify✨
 - [ ] Show depth of recursion
 - [ ] Show all recursive moves one-by-one
 - [ ] Build traversible tree
