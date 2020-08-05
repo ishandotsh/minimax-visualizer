@@ -72,18 +72,17 @@ function aifirstmove() {
 function aiplay(current_row, current_board) {
 	const container = document.getElementById("container");
 	let move = getBestMove(current_board);
-	let minimaxMoveIndex;
 
 	let boards = [];
 	const av_actions = actions(current_board);
+	av_actions.pop(av_actions.indexOf(move));
+	boards.push(result(current_board, move));
+
 	for (let i = 0; i < av_actions.length; i++) {
 		boards.push(result(current_board, av_actions[i]));
-		if (av_actions[i][0] === move[0] && av_actions[i][1] === move[1]) {
-			minimaxMoveIndex = i;
-		}
 	}
 
-	const newRow = new Row(boards, current_row.depth + 1, minimaxMoveIndex);
+	const newRow = new Row(boards, current_row.depth + 1, 0);
 	rows.push(newRow);
 	container.appendChild(newRow.getDisplayRow());
 
@@ -91,5 +90,3 @@ function aiplay(current_row, current_board) {
 		return;
 	}
 }
-
-reset();

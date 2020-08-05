@@ -32,3 +32,5 @@ infotrigger.addEventListener("click", toggleInfoModal);
 infocloseButton.addEventListener("click", toggleInfoModal);
 
 window.addEventListener("click", windowOnClick);
+
+toggleModal();
